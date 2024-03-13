@@ -1,7 +1,6 @@
 {
-  "app_key": "<This will be your BigPanda Integration app_key>",
-  "check": "Elevated errors on Assistants API",
-  "impact_description": "All Systems Operational",
+  "incident_name": "Elevated errors on Assistants API",
+  "page_status_description": "All Systems Operational",
   "incident_components_0_created_at": "2021-02-12T12:31:47.393-08:00",
   "incident_components_0_description": "All OpenAI API services at api.openai.com",
   "incident_components_0_id": "scd0s93nldpb",
@@ -72,9 +71,6 @@
   "meta_unsubscribe": "http://status.openai.com/?unsubscribe=37jzzqldct09",
   "page_id": "jbxzcdv9xc4d",
   "page_status_indicator": "none",
-  "primary_property": "check",
-  "secondary_property": "impact_description",
   "status": "critical",
-  "status_url": "https://stspg.io/3bg4l5qyqr3b",
   "timestamp": 1710299769380
 }
