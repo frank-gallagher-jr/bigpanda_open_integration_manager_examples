@@ -1,7 +1,6 @@
-# bigpanda_open_integration_manager_examples
+# BigPanda OIM (Open Integration Manager) configuration examples
 
-
-BigPanda OIM (Open Integration Manager) configuration examples
+(bigpanda_open_integration_manager_examples)
 
 
 In the folders included, please locate overview guides and configuration example images and exports from BigPanda's Open Integration Manager. 
