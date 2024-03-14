@@ -10,4 +10,4 @@ As time allows, if there isn't already a standard template or guides provided by
 
 As always, I imply no warranty and advise you to use these guides as a reference but to use your best judgement when applying these types of configurations.  
 
-:brain Enjoy!
+🧠 Enjoy!
