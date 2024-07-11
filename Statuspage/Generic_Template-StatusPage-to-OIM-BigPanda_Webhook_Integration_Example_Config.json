@@ -1,0 +1,97 @@
+{
+        "config": {
+            "map_remaining": true,
+            "is_array": false,
+            "secondary_property": [
+                {
+                    "name": "impact_description"
+                },
+                {
+                    "name": "component_status"
+                }
+            ],
+            "incident_identifier": [
+                "incident.id",
+                "component.id",
+                "page.id"
+            ],
+            "primary_property": [
+                {
+                    "name": "check"
+                }
+            ],
+            "version": "2.0",
+            "force_lowercase": false,
+            "additional_attributes": [
+                {
+                    "name": "status_url",
+                    "source": [
+                        "incident.shortlink"
+                    ]
+                },
+                {
+                    "isSuggestion": false,
+                    "name": "check",
+                    "source": [
+                        "incident.name",
+                        "component.name"
+                    ]
+                },
+                {
+                    "isSuggestion": false,
+                    "name": "impact_description",
+                    "source": [
+                        "page.status_description",
+                        "incident.impact",
+                        "incident.impact_override"
+                    ]
+                },
+                {
+                    "name": "component_status",
+                    "source": [
+                        "component_update.new_status",
+                        "component.status"
+                    ]
+                }
+            ],
+            "status": {
+                "status_map": {
+                    "warning": [
+                        "warning",
+                        "partial_outage",
+                        "minor",
+                        "investigating",
+                        "monitoring"
+                    ],
+                    "acknowledged": [
+                        "acknowledged"
+                    ],
+                    "critical": [
+                        "critical",
+                        "major"
+                    ],
+                    "ok": [
+                        "ok",
+                        "operational",
+                        "resolved"
+                    ],
+                    "unknown": [
+                        "unknown"
+                    ]
+                },
+                "default_to": "critical",
+                "source": [
+                    "page.status_indicator",
+                    "incident.status",
+                    "component.status",
+                    "component_update.new_status"
+                ]
+            },
+            "timestamp": {
+                "source": [
+                    "timestamp"
+                ]
+            }
+        },
+        "sample_payload": "{\n  \"meta\": {\n    \"unsubscribe\": \"http://statustest.flyingkleinbrothers.com:5000/?unsubscribe=j0vqr9kl3513\",\n    \"documentation\": \"http://doers.statuspage.io/customer-notifications/webhooks/\"\n  },\n  \"page\": {\n    \"id\": \"j2mfxwj97wnj\",\n    \"status_indicator\": \"critical\",\n    \"status_description\": \"Major System Outage\"\n  },\n  \"component_update\": {\n    \"created_at\": \"2013-05-29T21:32:28Z\",\n    \"new_status\": \"operational\",\n    \"old_status\": \"major_outage\",\n    \"id\": \"k7730b5v92bv\",\n    \"component_id\": \"rb5wq1dczvbm\"\n  },\n  \"component\": {\n    \"created_at\": \"2013-05-29T21:32:28Z\",\n    \"id\": \"rb5wq1dczvbm\",\n    \"name\": \"Some Component\",\n    \"status\": \"operational\"\n  },\n  \"incident\": {\n    \"backfilled\": false,\n    \"created_at\": \"2013-05-29T15:08:51-06:00\",\n    \"impact\": \"critical\",\n    \"impact_override\": null,\n    \"monitoring_at\": \"2013-05-29T16:07:53-06:00\",\n    \"postmortem_body\": null,\n    \"postmortem_body_last_updated_at\": null,\n    \"postmortem_ignored\": false,\n    \"postmortem_notified_subscribers\": false,\n    \"postmortem_notified_twitter\": false,\n    \"postmortem_published_at\": null,\n    \"resolved_at\": null,\n    \"scheduled_auto_transition\": false,\n    \"scheduled_for\": null,\n    \"scheduled_remind_prior\": false,\n    \"scheduled_reminded_at\": null,\n    \"scheduled_until\": null,\n    \"shortlink\": \"http://j.mp/18zyDQx\",\n    \"status\": \"monitoring\",\n    \"updated_at\": \"2013-05-29T16:30:35-06:00\",\n    \"id\": \"lbkhbwn21v5q\",\n    \"organization_id\": \"j2mfxwj97wnj\",\n    \"incident_updates\": [\n      {\n        \"body\": \"A fix has been implemented and we are monitoring the results.\",\n        \"created_at\": \"2013-05-29T16:07:53-06:00\",\n        \"display_at\": \"2013-05-29T16:07:53-06:00\",\n        \"status\": \"monitoring\",\n        \"twitter_updated_at\": null,\n        \"updated_at\": \"2013-05-29T16:09:09-06:00\",\n        \"wants_twitter_update\": false,\n        \"id\": \"drfcwbnpxnr6\",\n        \"incident_id\": \"lbkhbwn21v5q\"\n      },\n      {\n        \"body\": \"We are waiting for the cloud to come back online and will update when we have further information\",\n        \"created_at\": \"2013-05-29T15:18:51-06:00\",\n        \"display_at\": \"2013-05-29T15:18:51-06:00\",\n        \"status\": \"identified\",\n        \"twitter_updated_at\": null,\n        \"updated_at\": \"2013-05-29T15:28:51-06:00\",\n        \"wants_twitter_update\": false,\n        \"id\": \"2rryghr4qgrh\",\n        \"incident_id\": \"lbkhbwn21v5q\"\n      },\n      {\n        \"body\": \"The cloud, located in Norther Virginia, has once again gone the way of the dodo.\",\n        \"created_at\": \"2013-05-29T15:08:51-06:00\",\n        \"display_at\": \"2013-05-29T15:08:51-06:00\",\n        \"status\": \"investigating\",\n        \"twitter_updated_at\": null,\n        \"updated_at\": \"2013-05-29T15:28:51-06:00\",\n        \"wants_twitter_update\": false,\n        \"id\": \"qbbsfhy5s9kk\",\n        \"incident_id\": \"lbkhbwn21v5q\"\n      }\n    ],\n    \"name\": \"Virginia Is Down\"\n  }\n}"
+    }
