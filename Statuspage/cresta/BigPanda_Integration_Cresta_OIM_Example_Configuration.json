@@ -1,0 +1,172 @@
+{
+        "config": {
+            "map_remaining": false,
+            "is_array": false,
+            "secondary_property": [
+                {
+                    "name": "overall_status_description"
+                }
+            ],
+            "incident_identifier": [
+                "incident.id",
+                "incident.page_id",
+                "component.id",
+                "component.page_id"
+            ],
+            "primary_property": [
+                {
+                    "name": "check"
+                }
+            ],
+            "version": "2.0",
+            "additional_attributes": [
+                {
+                    "name": "status_url",
+                    "source": [
+                        "incident.shortlink",
+                        "status_url"
+                    ]
+                },
+                {
+                    "isSuggestion": false,
+                    "name": "check",
+                    "source": [
+                        "incident.name",
+                        "component.name"
+                    ]
+                },
+                {
+                    "isSuggestion": false,
+                    "name": "description",
+                    "source": [
+                        "incident.incident_updates.5.body",
+                        "incident.incident_updates.4.body",
+                        "incident.incident_updates.3.body",
+                        "incident.incident_updates.2.body",
+                        "incident.incident_updates.1.body",
+                        "incident.incident_updates.0.body"
+                    ]
+                },
+                {
+                    "name": "affected_components_0",
+                    "source": [
+                        "component.name",
+                        "incident.components.0.name"
+                    ]
+                },
+                {
+                    "name": "affected_components_1",
+                    "source": [
+                        "incident.components.1.name"
+                    ]
+                },
+                {
+                    "name": "affected_components_2",
+                    "source": [
+                        "incident.components.2.name"
+                    ]
+                },
+                {
+                    "name": "affected_components_3",
+                    "source": [
+                        "incident.components.3.name"
+                    ]
+                },
+                {
+                    "name": "affected_components_4",
+                    "source": [
+                        "incident.components.4.name"
+                    ]
+                },
+                {
+                    "name": "affected_components_5",
+                    "source": [
+                        "incident.components.5.name"
+                    ]
+                },
+                {
+                    "name": "affected_components_6",
+                    "source": [
+                        "incident.components.6.name"
+                    ]
+                },
+                {
+                    "name": "description_update_previous",
+                    "source": [
+                        "incident.incident_updates.1.body"
+                    ]
+                },
+                {
+                    "name": "impact_severity",
+                    "source": [
+                        "incident.impact_override",
+                        "incident.impact"
+                    ]
+                },
+                {
+                    "name": "description_update_current",
+                    "source": [
+                        "incident.incident_updates.0.body"
+                    ]
+                },
+                {
+                    "name": "overall_status_description",
+                    "source": [
+                        "page.status_description"
+                    ]
+                },
+                {
+                    "name": "current_status_indicator",
+                    "source": [
+                        "page.status_indicator"
+                    ]
+                },
+                {
+                    "name": "incident_status_current",
+                    "source": [
+                        "incident.status"
+                    ]
+                }
+            ],
+            "status": {
+                "status_map": {
+                    "warning": [
+                        "warning",
+                        "partial_outage",
+                        "minor",
+                        "investigating",
+                        "monitoring",
+                        "identified"
+                    ],
+                    "acknowledged": [
+                        "acknowledged"
+                    ],
+                    "critical": [
+                        "critical",
+                        "major"
+                    ],
+                    "ok": [
+                        "ok",
+                        "operational",
+                        "resolved",
+                        "none"
+                    ],
+                    "unknown": [
+                        "unknown"
+                    ]
+                },
+                "default_to": "critical",
+                "source": [
+                    "page.status_indicator",
+                    "incident_status_current",
+                    "current_status_indicator"
+                ]
+            },
+            "timestamp": {
+                "source": [
+                    "timestamp"
+                ]
+            }
+        },
+        "sample_payload": "{\n      \"secondary_property\": \"description\",\n      \"affected_components_6\": \"Outcome Insights\",\n      \"affected_components_4\": \"Topic Discovery\",\n      \"incident_identifier\": \"t0cy3cr9mdj9_xcmhyg33k8pt\",\n      \"description\": \"Our systems were briefly stable, suggesting a resolution, but we're still experiencing ongoing latencies with Closed Conversation, Customer Insights, Outcome Insights, and Topic Discovery in Cresta Director for our US West customers. Our team is actively investigating.\",\n      \"affected_components_5\": \"Customer Insights\",\n      \"affected_components_2\": \"Keyword Insights\",\n      \"primary_property\": \"check\",\n      \"check\": \"Latency issues continue (only affecting customers in the us-west-2 region).\",\n      \"affected_components_3\": \"Closed Conversations - Calls\",\n      \"affected_components_0\": \"Insights - Performance\",\n      \"affected_components_1\": \"Insights - Leaderboard\",\n      \"status_url\": \"https://stspg.io/gggyk8ssft87\",\n      \"overall_status_description\": \"Partially Degraded Service\",\n      \"description_update_current\": \"Our systems were briefly stable, suggesting a resolution, but we're still experiencing ongoing latencies with Closed Conversation, Customer Insights, Outcome Insights, and Topic Discovery in Cresta Director for our US West customers. Our team is actively investigating.\",\n      \"current_status_indicator\": \"minor\",\n      \"app_key\": \"a4751a0576ee0dadc6520b8dfd78c3dd\",\n      \"incident_status_current\": \"investigating\",\n      \"impact_severity\": \"minor\",\n      \"timestamp\": \"1714673728580\",\n      \"status\": \"warning\"\n    }"
+    }
